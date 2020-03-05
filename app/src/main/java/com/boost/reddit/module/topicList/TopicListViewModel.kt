@@ -77,13 +77,13 @@ class TopicListViewModel: BaseViewModel()  {
         }
     }
 
-    private suspend fun getTop20Topic(){
+    fun getTop20Topic(){
         topicList = ArrayList(topicList.asSequence()
             .sortedByDescending { it.upVote }
             .toMutableList().subList(0,20))
     }
 
-    private suspend fun setData(){
+    private fun setData(){
         topicListForm.topicList = topicList
     }
 }
