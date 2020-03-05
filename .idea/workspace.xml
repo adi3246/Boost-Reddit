@@ -345,7 +345,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android Instrumented Tests.useAppContext()">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="TopicListViewModelUnitTest.Test data is not null" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
