@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Boost Reddit</string>
+    <string name="topic_list">Topic List</string>
+    <string name="topic_detail">Topic Detail</string>
+    <string name="transition">Transition</string>
+    <string name="save">Save</string>
+    <string name="topic">Topic</string>
+    <string name="new_topic">New Topic</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="try_again">Something went wrong, please try again later</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.boost.reddit.model.TopicModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{model.topicText}'
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center|start"/>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="end">
+
+            <ImageView
+                android:id="@+id/btn_up_vote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_up_vote"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:text='@{model.upVote+""}'
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/btn_down_vote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_down_vote"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:text='@{model.downVote+""}'/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
