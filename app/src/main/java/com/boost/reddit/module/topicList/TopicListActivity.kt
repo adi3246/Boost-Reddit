@@ -14,6 +14,7 @@ import com.boost.reddit.ApplicationConstants
 import com.boost.reddit.R
 import com.boost.reddit.base.BaseActivity
 import com.boost.reddit.databinding.ActivityTopicListBinding
+import com.boost.reddit.model.TopicModel
 import com.boost.reddit.module.topicDetail.topicDetailIntent
 import kotlinx.android.synthetic.main.toolbar.view.*
 
@@ -40,14 +41,13 @@ class TopicListActivity : BaseActivity() {
 
         if (savedInstanceState == null) {
             viewModel.mockData()
-            viewModel.getTop20Topic()
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == ApplicationConstants.NEW_TOPIC && resultCode == Activity.RESULT_OK) {
-            viewModel.getTop20Topic()
+            viewModel.addNewTopicList(data!!.getSerializableExtra(ApplicationConstants.NEW_TOPIC_MODEL_DATA) as TopicModel)
         }
     }
 

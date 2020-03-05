@@ -66,8 +66,10 @@ class TopicDetailActivity : BaseActivity() {
     }
 
     override fun onBackPressed() {
-        if (viewModel.updateTopicList)
+        if (viewModel.updateTopicList){
+            intent.putExtra(ApplicationConstants.NEW_TOPIC_MODEL_DATA, viewModel.newTopicData)
             setResult(RESULT_OK, intent)
+        }
         super.onBackPressed()
     }
 

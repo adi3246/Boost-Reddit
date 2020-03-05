@@ -1,6 +1,5 @@
 package com.boost.reddit.module.topicDetail
 
-import com.boost.reddit.ApplicationClass
 import com.boost.reddit.base.BaseViewModel
 import com.boost.reddit.model.TopicModel
 
@@ -18,12 +17,14 @@ class TopicDetailViewModel: BaseViewModel()  {
     val topicDetailForm = TopicDetailForm()
     var updateTopicList = false
 
+    var newTopicData = TopicModel()
+
     fun setTopicDetail(topicModel: TopicModel) {
         topicDetailForm.topic = topicModel
     }
 
     fun saveTopic(topic: String){
-        ApplicationClass.topicModel.add(TopicModel(0, topic, 0, 0))
+        newTopicData = TopicModel(0, topic, 200, 0)
         updateTopicList = true
         statusMessage.value = "Success"
     }
