@@ -8,7 +8,7 @@ MVVM with data binding
 
 # Framework Used
 - AndroidX
-- Kotlin coroutines
+- Kotlin Coroutines
 
 # Screenshots
 ![](Screenshot_1.png)
